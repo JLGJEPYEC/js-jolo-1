@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Probando html</title>
+    <script src = "para-tabla.js"></script>
+</head>
+
+<body>
+    <div id = "prueba">
+        HOLA
+    </div>
+    <button id = "prueba-2" onclick="generarTablaHTML()">
+        haz click aqui mejor
+    </button>
+    <div class = "tabla">
+        
+    </div>
+
+    <style>
+
+        .prueba-5{
+            background-color: chocolate;
+            color: white;
+            width: 200px;
+            height: 50px;
+        }
+
+        .prueba-4{
+            background-color: red;
+            color: white;
+            width: 200px;
+            height: 50px;
+        }
+
+        .prueba-3{
+            background-color: blue;
+            color: white;
+            width: 200px;
+            height: 50px;
+        }
+
+    </style>
+    <div class = "prueba-3" onclick="cargarTablas()">
+        haz click acá para cargar tablas
+    </div>
+    <div class = "prueba-4" onclick = "mostrarTablaConsola()">
+        haz click acá para ver las tablas en consola
+    </div>
+    <div class = "prueba-5" onclick = "mostrarElementosClass()">
+        haz click acá para ver los elementos de durkania
+    </div>
+
+    <style>
+        .primer-contenido {
+            background-color: #b39afd;
+            color: white;
+        }
+        .primer-articulo {
+            height: 400px;
+            display: grid;
+            grid-gap: 0px;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(2,auto);
+            grid-template-areas:
+                "primer-CuadroTitulo primer-imagen descripcion"
+                "autor primer-imagen more-info";
+            margin: auto;
+            padding-bottom: 100px;
+        }
+        .primer-CuadroTitulo {
+            width: 75%;
+            grid-area: primer-CuadroTitulo;
+            overflow: hidden;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: auto;
+        }
+        a {
+            color: white;
+            text-decoration: none;
+        }
+        .autor {
+            grid-area: autor;
+            margin: 0 auto;
+            text-align: left;
+            width: 75%;
+        }
+        .autor p {
+            margin-block-start: 0;
+        }
+        .primer-imagen {
+            grid-area: primer-imagen;
+            width: 400px;
+            height: 400px;
+            margin: 0 auto;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+        .descripcion {
+            grid-area: descripcion;
+            width: 75%;
+            text-align: justify;
+            margin-top: auto;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .primer-articulo .more-info {
+            grid-area: more-info;
+            background-color: #5B43EA;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 10px;
+        }
+        .more-info {
+            margin: 0 auto;
+            width: 150px;
+            height: 30px;
+            text-align: center;
+            border-bottom-left-radius: 20px;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+            display: flex;
+        }
+        .primer-articulo .more-info a {
+            margin: auto;
+            color: #ffffff;
+        }
+    </style>
+
+    <div class="primer-contenido">
+        <div class="primer-articulo">
+            <div class="primer-CuadroTitulo">
+                <a href="https://startapp.pe/apps/el-muro-de-silencio-que-se-derrumba-de-apple/">
+                    <h3 class="primer-TextoTitulo">El muro de silencio que se derrumba de Apple</h3>
+                </a>
+            </div>
+            <div class="autor">
+                <p>Por: <a href="https://startapp.pe/author/r1ch4rd/">Richard Pulache</a></p>
+            </div>
+            <div class="primer-imagen"> <a
+                    href="https://startapp.pe/apps/el-muro-de-silencio-que-se-derrumba-de-apple/"><img
+                        src="https://startapp.pe/wp-content/uploads/2021/08/hyoyuiogy0-1024x576.jpg"> </a></div>
+            <div class="descripcion">Los silenciosos empleados de Apple están comenzando a decir lo que piensan.&nbsp;En las
+                últimas semanas, han hablado públicamente sobre experiencias de acoso y discriminación, preocupaciones…
+            </div>
+            <div class="more-info">
+                <a href="https://startapp.pe/apps/el-muro-de-silencio-que-se-derrumba-de-apple/">
+                    Más información
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class = "ga">
+        ga1
+    </div>
+    <div class="ga">
+        ga2
+    </div>
+    <p class ="ga">
+        ga3
+    </p>
+    <button class = "ga">
+        ga4
+    </button>
+    <ul class="ga">
+        <li>ga5</li>
+    </ul>
+
+    <div class = "establecer">
+
+    </div>
+
+
+
+
+</body>
+</html>
