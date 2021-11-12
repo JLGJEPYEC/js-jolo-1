@@ -53,18 +53,27 @@ function mostrarTablaConsola(){
         console.log("tambien puede ser: "+u["nombre"]);
     })
 }
+var h =0;
+
 
 function mostrarElementosClass(){
-    let xd = document.getElementsByClassName("ga");
-    console.log(xd.length);
-    var z =document.getElementsByClassName("establecer")[0];
-    for (let j = 0; j < xd.length; j++) {
-        var adicionar = document.createElement("p");
-        var finalizar = document.createTextNode(xd[j]);
+
+
+    usuarios.forEach(u => {
+        var primero, adicionar, finalizar;
+        //se abre el bloque
+        primero = document.getElementsByClassName("establecer")[0];
+        adicionar = document.createElement("p");//se insertan elementos dentro del bloque
+        finalizar = document.createTextNode("nombre : "+u["nombre"]);
         adicionar.appendChild(finalizar);
-        z.appendChild(adicionar);
-        console.log(j);
-    }
+        primero.appendChild(adicionar);//finaliza primer bloque
+        adicionar = document.createElement("p");//comienza otro bloque a añadir
+        finalizar = document.createTextNode("apellido paterno : "+u["ap_paterno"]);
+        adicionar.appendChild(finalizar);
+        primero.appendChild(adicionar);//finaliza segundo bloque
+    } )
+    h++;
+    console.log(h);
 }
 
 
