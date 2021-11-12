@@ -48,7 +48,7 @@ function cargarTablas (){
 
 }
 
-function mostrarTablaConsola(){
+function mostrarTablaDibujada(){
     usuarios.forEach(u => {
         console.log("tambien puede ser: "+u["nombre"]);
     })
@@ -78,7 +78,45 @@ function mostrarElementosClass(){
 
 
 
+function agregandoDivs(){
+    let primero, adicionar, finalizar;
+    primero=document.getElementsByClassName("establecer")[0];
+    adicionar=document.createElement("div");
+    adicionar.className = "dichoso";
+    finalizar=document.createTextNode("estableciendose finalmente");
+    adicionar.appendChild(finalizar);
+    primero.appendChild(adicionar);
+}
 
+function restandoDivs(){
+    let dr =document.getElementsByClassName("dichoso");
+    let cantidades=dr.length;
+    let primero,ubicacion;
+    if (cantidades>0){
+        primero= dr[cantidades-1];
+        ubicacion=document.getElementsByClassName("establecer")[0];
+        ubicacion.removeChild(primero);
+    }else{
+        console.log("no hay nada mas a eliminar");
+    }
+    
+}
+
+function restandoTablas(){
+    let dr =document.getElementsByTagName("p");
+    let cantidades=dr.length;
+    console.log(cantidades);
+    let primero,ubicacion;
+    if (cantidades>0){
+        primero= dr[cantidades-1];
+        ubicacion=document.getElementsByClassName("establecer")[0];
+        ubicacion.removeChild(primero);
+    }else{
+        console.log("no hay nada mas a eliminar");
+        
+    }
+    usuarios = [];
+}
 
 
 
